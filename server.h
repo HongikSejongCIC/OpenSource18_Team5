@@ -22,7 +22,7 @@ void server(int port)
 				int clnt_addr_size;
 				char message[300];
 				int i,x;
-				
+				char n;
 				//서버 소켓 생성
 				serv_sock = socket(PF_INET, SOCK_STREAM, 0);
 				if(serv_sock == -1)
@@ -51,17 +51,28 @@ void server(int port)
 								error_handling("accept ERROR");
 
 				//데이터 전송
-				printf("메세지를 입력하세요: ");
-	  		scanf("%s", message);
-				for(i = 0; (i < 100 && message[i] != '\0'); i++)
-        message[i] = message[i] + 3; //the key for encryption is 3 that is added to ASCII value
+				printf("선택해주십시요\n");
+				printf("1.암호화 하지 않고 보내기\n");
+				printf("2.암호화 하고 보내기\n");
+				scanf("%d",&x);
+				switch(x){
+				case 1:
+				printf("메시지를 입력하세요:");
+				scanf("%s", message);
+				printf("메시지 전송이 완료되었습니다\n");
+				break;
+				
 
+				case 2:
+				printf("메시지를 입력하세요:");
+				scanf("%s", message);		
+				for(i=0; (i<100 && message[i] != '\0'); i++)
+					message[i] = message[i] + 3;
+				printf("메시지 전송이 완료되었습니다\n");		
+				break;			
+				}
 				write(clnt_sock, message, sizeof(message));
-				printf("메시지 전송이 완료되었습니다");
-
-				//연결 종료
 				close(clnt_sock);
-
-				return;
+				return;				
 }
 
