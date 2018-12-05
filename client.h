@@ -14,7 +14,7 @@ void client(int port)
 				struct sockaddr_in serv_addr;
 				char message[300];
 				int str_len;
-
+				int i,x;
 				//서버 접속을 위한 소켓 생성
 				sock = socket(PF_INET,SOCK_STREAM, 0);
 				
@@ -37,10 +37,23 @@ void client(int port)
 				message[str_len] = 0;
 
 				printf("메세지가 도착하였습니다 : %s\n", message);
+				printf("/n 선택해주십시요:\n");
+				printf("1 = 나가기\n");
+				printf("2 = 복호화하기\n");
+				scanf("%d", &x);
+				switch(x){
+				case 1:
+					break;
+				case 2:
+				for(i = 0; (i < 100 && message[i] != '\0'); i++)
+        			message[i] = message[i] - 3; //the key for encryption is 3 that is subtracted to ASCII value
+
+      printf(" 복호화된 메세지 입니다:: %s\n", message);
+      
 
 				//연결 종료
 				close(sock);
-
+}
 				return;
 }
 

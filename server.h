@@ -21,7 +21,8 @@ void server(int port)
 				struct sockaddr_in clnt_addr;
 				int clnt_addr_size;
 				char message[300];
-
+				int i,x;
+				
 				//서버 소켓 생성
 				serv_sock = socket(PF_INET, SOCK_STREAM, 0);
 				if(serv_sock == -1)
@@ -52,6 +53,9 @@ void server(int port)
 				//데이터 전송
 				printf("메세지를 입력하세요: ");
 	  		scanf("%s", message);
+				for(i = 0; (i < 100 && message[i] != '\0'); i++)
+        message[i] = message[i] + 3; //the key for encryption is 3 that is added to ASCII value
+
 				write(clnt_sock, message, sizeof(message));
 				printf("메시지 전송이 완료되었습니다");
 
