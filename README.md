@@ -1,4 +1,6 @@
 # Opensource project
+![gate](https://user-images.githubusercontent.com/44111132/49881840-98516c80-fe72-11e8-85cd-f57a13f8e08c.PNG)
+
 
 # Participant 
 1. KIM HYEON SU
