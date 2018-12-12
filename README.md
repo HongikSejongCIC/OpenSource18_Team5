@@ -1,5 +1,5 @@
 # Opensource project
-![gate](https://user-images.githubusercontent.com/44111132/49881840-98516c80-fe72-11e8-85cd-f57a13f8e08c.PNG)
+![gate](https://user-images.githubusercontent.com/44111132/49882167-6096f480-fe73-11e8-9116-c27f04270ace.PNG)
 
 
 # Participant 
