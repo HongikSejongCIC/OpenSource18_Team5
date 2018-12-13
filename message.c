@@ -18,11 +18,11 @@ HERE:
 				switch(Choice){
 				case 1:
 								printf("메시지를 수신합니다.\n");
-								client(1601);
+								client(1602);
 								break;
 				case 2:
 								printf("메시지를 전송합니다.\n");
-								server(1601);
+								server(1602);
 								break;
 				default:
 								goto HERE;
