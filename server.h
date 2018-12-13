@@ -55,7 +55,7 @@ void server(int port)
 	  			scanf("%s", message);
 			 	printf("선택해 주십시요\n");
 				printf("1. 암호화 하지 않고 보내기\n");
-				printf("2.복호화하고 보내기\n");
+				printf("2. 암호화하고 보내기\n");
 				scanf("%d",&x);
 				switch(x){
 				case 1:
